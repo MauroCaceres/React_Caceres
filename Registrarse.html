@@ -4,162 +4,146 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/cssboot.css">
     <title>Registrarse</title>
 </head>
-<body class="section__background">
-    <div id="grilla_registrarse">
-        <header>
-            <nav class="menu__item2">
-                <div class="menu__anchor2">
-                    <a href="index.html">
-                        <img class="imglogo2" src="Imagenes/1.png" alt="Logo Pandemonium">
-                    </a>
+<body class="web_background">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark general_border">
+            <a class="navbar-brand" href="index.html">
+                <img class="img-fluid imglogo" src="img/1.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                   <a class="nav-link" href="General.html">General</a>
+                </li>
+                <li class="nav-item">
+                      <a class="nav-link" href="Noticias.html">Noticias</a>
+                </li>
+                <li class="nav-item">
+                      <a class="nav-link" href="Contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                      <a  class="nav-link" href="Registrarse.html">REGISTRARSE</a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+    <section>
+        <article class="container blog__simple my-4 general_border">
+        <h2 class="txtgold">Registrarse</h2>
+        </article>
+
+        <article class="container blog__simple general_border my-4">
+          <h4 class="text-secondary">Información</h4>
+          <p class= "txtold text-secondary my-4 pb-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae hic sequi consectetur necessitatibus ipsum, nesciunt debitis veniam, molestias esse velit atque, quidem itaque saepe maiores aperiam veritatis. Eveniet, reiciendis officia.</p>
+
+          <form>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="validationDefault01">Primer nombre</label>
+                <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Mark" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationDefault02">Segundo nombre</label>
+                <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationDefaultUsername">Nombre de usuario</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                  </div>
+                  <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
                 </div>
-                <div class="menu__anchor2">
-                    <a class="menu__txt2" href="General.html">
-                        General
-                    </a>
-                </div>
-                <div class="menu__anchor2">
-                    <a class="menu__txt2"  href="Noticias.html">
-                        Noticias
-                    </a>
-                </div>
-                <div class="menu__anchor2">
-                    <a class="menu__txt2"  href="Contacto.html">
-                        Contacto
-                    </a>
-                </div>
-                <div class="menu__anchor2">
-                    <a class="menu__txt2" href="Registrarse.html">
-                        <span class="anchor__registration2">REGISTRARSE</span>
-                    </a>
-                </div>
-            </nav>
-        </header>
-        <section id="main">
-            <div class="section__container2">
-                <h2 class="section__title2" name="top">Registrarse</h2>
+              </div>
             </div>
-            <div>
-                <div class="blog__simple3">
-                    <div class="blog__txt">
-                        <h3 class="blog__title">Información</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
-        </section>
-        <aside class="blog__simple3">
-            <form class="block_contacto" action="almacen.php" method="POST" enctype="multipart/form-data">
-                <fieldset>
-                    <legend class="blog__legend">Datos Personales</legend>
-                        <label for="Nombre">Nombre:</label>
-                        <input type=”text” name=”Nombre” maxlength=”50”>
-                        <label for="Apellido">Apellido:</label>
-                        <input type=”text” name=”Apellido” maxlength=”50”>
-                        </br>
-                        </br>
-                        <label for="Sexo">Sexo:</label>
-                        <input type="radio" name="Sexo" value="Hombre">Hombre
-                        <input type="radio" name="Sexo" value="Mujer">Mujer
-                        </br>
-                        </br>
-                        <label for="Estado">Estado:</label>
-                        <select name="Estado">
-                            <option value="Soltero/a">Soltero/a</option>
-                            <option value="Casado/a">Casado/a</option>
-                            <option value="Viudo/a">Viudo/a</option>
-                            <option value="Divorciado/a">Divorciado/a</option>
-                        </select>
-                </fieldset>
-            </br>
-                <fieldset>
-                    <legend class="blog__legend">Datos de Direccion</legend>
-                        <label for="Pais">País:</label>
-                        <input type=”text” name=”Pais” maxlength=”50”>
-                        </br>
-                        </br>
-                        <label for="Ciudad">Ciudad:</label>
-                        <input type=”text” name=”Ciudad” maxlength=”50”>
-                        </br>
-                        </br>
-                        <label for="Direccion">Dirección:</label>
-                        <input type=”text” name=”Direccion” maxlength=”50”>
-                        <label for="N">N°:</label>
-                        <input type=”text” name=”N” maxlength=”50”>
-                        <label for="CP">C.P.:</label>
-                        <input type=”text” name=”CP” maxlength=”50”>
-                </fieldset>
-            </br>
-                <fieldset>
-                    <legend class="blog__legend">Datos de Usuario</legend>
-                        <label for="Correo">Correo:</label>
-                        <input type="text" name="Correo" maxlength="50">
-                        </br>
-                        </br>
-                        <label for="Usuario">Nombre de Usuario:</label>
-                        <input type="text" name="Usuario" maxlength="50">
-                        </br>
-                        </br>
-                        <label for="Contraseña">Ingrese clave nueva:</label>
-                        <input type="password" name="Contraseña">
-                        </br>
-                        </br>
-                        <label for="Contraseña2">Corroborar la clave:</label>
-                        <input type="password" name="Contraseña2">
-                        </br>
-                        </br>
-                        <label for="chbox1">¿Desea recibir noticias al correo?</label>
-                        <input type="checkbox" name="chbox1">
-                        </br>
-                        <p>¡Deja un mensaje!</p>
-                        <textarea name="comentarios" cols="50" rows="5"></textarea>
-                </fieldset>
-                </br>
-                <input type="submit" name="Enviar" value="Enviar">
-                <input type="reset" name="Borrar" value="Borrar">
-            </form>
-        </aside>
-        <footer>
-            <div class="blog__simple3">
-                <div>
-                    <div>
-                        <img class="rotate" src="Imagenes/19.png">
-                    </div>
-                    <a href="index.html">
-                        <img class="imglogo__footer" src="Imagenes/1.png" alt="Logo Pandemonium">
-                    </a>
-                    <p class="footer__txt">Para más información: <a class="terminos__anchor" href="#Mauro.net"> Mauro.net</a></p>
-                    <p class="footer__txt">2021 MAURO, INC. Todos los derechos reservados.</p>
-                    <div class="terminos__container2">
-                        <div class="terminos__item2">
-                            <a class="terminos__anchor" href="#Privacidad">Privacidad</a>
-                        </div>
-                        <div class="terminos__item2">
-                            <a class="terminos__anchor" href="#Legal">Legal</a>
-                        </div>
-                        <div class="terminos__item2">
-                            <a class="terminos__anchor" href="#Terminos">Términos</a>
-                        </div >
-                        <div class="terminos__item2">
-                            <a class="terminos__anchor" href="#Blog">Blog</a>
-                        </div>
-                    </div>
-                    <div class="footer__txt">
-                        <a class="terminos__anchor" href="#top">Volver arriba</a>
-                    </div>
-                </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationDefault03">Ciudad</label>
+                <input type="text" class="form-control" id="validationDefault03" required>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationDefault04">Estado</label>
+                <input type="text" class="form-control" id="validationDefault04" required>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationDefault05">Código Postal</label>
+                <input type="text" class="form-control" id="validationDefault05" required>
+              </div>
             </div>
-        </footer>
-    </div>
+            <div class="form-row">
+              <label for="inputPassword6">Contraseña</label>
+              <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+              <small id="passwordHelpInline" class="text-muted">
+                Debe tener entre 8 y 20 caracteres.
+              </small>
+            </div>
+            <div class="form-row">
+              <label for="inputPassword62">Corroborar contraseña</label>
+              <input type="password" id="inputPassword62" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+              <small id="passwordHelpInline" class="text-muted">
+                Ingrese nuevamente la contraseña.
+              </small>
+            </div>
+            <div class="form-goup">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                <label class="form-check-label mb-4" for="invalidCheck2">
+                  Acepto los Términos y Condiciones
+                </label>
+              </div>
+            </div>
+            <button class="btn btn-primary mb-4" type="submit">Enviar formulario</button>
+          </form>
+        </article>
+    </section>
+    
+    <footer class="py-5 bg-dark general_border">
+      <div>
+          <img class="rotate" src="img/19.png">
+      </div>
+      <a href="index.html">
+          <img class="imglogo__footer my-4" src="img/1.png" alt="Logo Pandemonium">
+      </a>
+      <div class="container px-4"><p class="m-0 text-center text-white">Para más información: <a class="terminos__anchor" href="#Mauro.net"> Mauro.net</a></p>
+      </div>
+      <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; MAURO INC 2021</p>
+      </div>
+      <div class="container px-4"><p class="m-0 text-center text-white">Todos los derechos reservados</p>
+      </div>
+
+      <div class="container terminos__container2">
+          <div class="terminos__item2">
+              <a class="terminos__anchor" href="#Privacidad">Privacidad</a>
+          </div>
+          <div class="terminos__item2">
+              <a class="terminos__anchor" href="#Legal">Legal</a>
+          </div>
+          <div class="terminos__item2">
+              <a class="terminos__anchor" href="#Terminos">Términos</a>
+          </div >
+          <div class="terminos__item2">
+              <a class="terminos__anchor" href="#Blog">Blog</a>
+          </div>
+      </div>
+      <div class="container">
+          <a class="terminos__anchor" href="#top">Volver arriba</a>
+      </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

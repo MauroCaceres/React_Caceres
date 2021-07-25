@@ -1,0 +1,176 @@
+body {
+    background-color: black;
+    text-align: center;
+    color: whitesmoke;
+}
+.web_background {
+	background-image: url("../img/2.jpg");
+	background-position:center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.background_title{
+    background-image: url("../img/20.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+.imglogo {
+	width: 145px;
+  	height: 20px;
+      margin-bottom: 5px;
+}
+.general_border{
+    border-radius: 15px;
+}
+.titledarkred{
+    color: darkred;
+}
+.txtdarkred {
+    color: darkred;
+    font-family: 'Goudy Bookletter 1911', serif;
+	font-weight: 1000;
+    font-size: 1.1rem;
+}
+.txtred{
+    color: red;
+}
+.txtgold {
+	color: darkgoldenrod;
+}
+.txtgrey{
+    color: darkgray;
+    font-style: italic;
+}
+.txtleft {
+	text-align: left;
+}
+.txtcenter {
+	text-align: center;
+}
+.blog__simple{
+	background-color: rgba(15, 15, 15, 0.8);
+}
+.txtold{
+	font-family: 'Goudy Bookletter 1911', serif;
+	font-weight: 1000;
+    font-size: 1.1rem;
+}
+/*------------Bloques Graficos-----------*/
+.background_container{
+    background-image: url("../img/4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.background_container2{
+    background-image: url("../img/6.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.background_container3{
+    background-image: url("../img/8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+/*------------Lista Graficos-----------*/
+.lista__txt {
+	color: rgb(202, 202, 33);
+	font-size: 1rem;
+    text-align: left;
+}
+/*-------------------------*/
+.lista__txt2 {
+	color: darkgray;
+	font-size: 1rem;
+    text-align: left;
+}
+/*-----------Redes--------------*/
+.main__redes{
+	background-color: #121212;
+	list-style-type: none;
+	border-radius: 10px;
+	margin: 20px;
+	padding: 0;
+	overflow: hidden;	
+	text-align: center;
+	background-image: linear-gradient(to bottom, black , rgb(133, 101, 22));
+}
+.redes__item {
+	position: relative;
+	display: inline-block;
+	padding: 0 90px 0 90px;
+}
+.redes__anchor {
+	display: block;
+	color: grey;
+	text-decoration: none;
+}
+.redes__img {
+	height: 50px;
+}
+/*--------------Terminos--------------*/
+.terminos__container2{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+.terminos__item2 {
+	font-size: 20px;
+	padding: 15px;
+}
+.terminos__anchor {
+	text-decoration: none;
+}
+.terminos__anchor:hover {
+    text-decoration: underline;
+}
+/*--------------Animación Footer--------------*/
+.imglogo__footer {
+	width: 165px;
+  	height: 25px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	transition: all 0.10s;
+}
+.imglogo__footer:hover{
+	transform: scale(1.5,1.5);
+}
+.rotate {
+	animation: rotation 10s infinite linear;
+	display: block;
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+    padding: 10px;
+}
+
+@keyframes rotation {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(359deg);
+	}
+}

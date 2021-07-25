@@ -4,142 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/cssboot.css">
     <title>Noticias</title>
 </head>
-<body class="section__background">
-    <div id="grilla_noticias">
-        <header>
-            <nav class="menu__item2">
-                <div class="menu__anchor2">
-                    <a href="index.html">
-                        <img class="imglogo2" src="Imagenes/1.png" alt="Logo Pandemonium">
-                    </a>
-                </div>
-                <div class="menu__anchor2">
-                    <a class="menu__txt2" href="General.html">
-                        General
-                    </a>
-                </div>
-                <div class="menu__anchor2">
-                    <a class="menu__txt2"  href="Noticias.html">
-                        Noticias
-                    </a>
-                </div>
-                <div class="menu__anchor2">
-                    <a class="menu__txt2"  href="Contacto.html">
-                        Contacto
-                    </a>
-                </div>
-                <div class="menu__anchor2">
-                    <a class="menu__txt2" href="Registrarse.html">
-                        <span class="anchor__registration2">REGISTRARSE</span>
-                    </a>
-                </div>
-            </nav>
-        </header>
-        <section id="main">
-            <div class="section__container2">
-                <h2 class="section__title2" name="top">Noticias</h2>
+<body class="web_background">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark general_border">
+            <a class="navbar-brand" href="index.html">
+                <img class="img-fluid imglogo" src="img/1.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                   <a class="nav-link" href="General.html">General</a>
+                </li>
+                <li class="nav-item">
+                      <a class="nav-link" href="Noticias.html">Noticias</a>
+                </li>
+                <li class="nav-item">
+                      <a class="nav-link" href="Contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                      <a  class="nav-link" href="Registrarse.html">REGISTRARSE</a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+    <section>
+        <article class="container blog__simple my-4 general_border">
+        <h2 class="txtgold">Noticias</h2>
+        </article>
+
+        <article class="container my-4 txtleft txtgold">
+            <h2 class="text-secondary">Más Recientes</h2>
+            </article>
+
+        <article class="container blog__simple general_border my-4">
+            <div class="row my-4">
+              <div class="col-lg-4">
+                <img src="img/14.jpg" class="img-fluid my-4 general_border">
+              </div>
+              <div class="col-lg-8">
+                <h4 class="txtgold my-4">Versión 0.5.2 Nuevo sistema de seguimento AI</h4>
+                <p class= "txtold text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae hic sequi consectetur necessitatibus ipsum, nesciunt debitis veniam, molestias esse velit atque, quidem itaque saepe maiores aperiam veritatis. Eveniet, reiciendis officia.</p>
+              </div>
             </div>
-            <div>
-                <h2 class="blog__title2">Más recientes</h2>
+          </article>
+
+          <article class="container blog__simple general_border my-4">
+            <div class="row my-4">
+              <div class="col-lg-4">
+                <img src="img/15.jpg" class="img-fluid my-4 general_border">
+              </div>
+              <div class="col-lg-8">
+                <h4 class="txtgold my-4">Patch 4.2 Mejora de Motor Gráfico</h4>
+                <p class= "txtold text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae hic sequi consectetur necessitatibus ipsum, nesciunt debitis veniam, molestias esse velit atque, quidem itaque saepe maiores aperiam veritatis. Eveniet, reiciendis officia.</p>
+              </div>
             </div>
-            <div>
-                <div class="content_column2">
-                    <div class="main__section2">
-                        <div>
-                            <img class="content__img2" src="Imagenes/14.jpg">
-                        </div>
-                            <div>
-                             <h3 class="blog__legend">Versión 0.5.2 Nuevo sistema de seguimento AI</h3>
-                             <p class="blog__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
-                    <div class="main__section2">
-                        <div>
-                            <img class="content__img2" src="Imagenes/15.jpg">
-                        </div>
-                            <div>
-                             <h3 class="blog__legend">Patch 4.2 Mejora de Motor Gráfico</h3>
-                             <p class="blog__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
-                    <div class="main__section2">
-                        <div>
-                            <img class="content__img2" src="Imagenes/16.jpg">
-                        </div>
-                            <div>
-                             <h3 class="blog__legend">Versión 0.5.1 Arreglos de bugs de interacción</h3>
-                             <p class="blog__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
-                    <div class="main__section2">
-                        <div>
-                            <img class="content__img2" src="Imagenes/17.jpg">
-                        </div>
-                            <div>
-                             <h3 class="blog__legend">Patch 4.1 Nuevos modelos de textura agregados</h3>
-                             <p class="blog__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
-                </div>
+          </article>
+
+          <article class="container blog__simple general_border my-4">
+            <div class="row my-4">
+              <div class="col-lg-4">
+                <img src="img/16.jpg" class="img-fluid my-4 general_border">
+              </div>
+              <div class="col-lg-8">
+                <h4 class="txtgold my-4">Versión 0.5.1 Arreglos de bugs de interacción</h4>
+                <p class= "txtold text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae hic sequi consectetur necessitatibus ipsum, nesciunt debitis veniam, molestias esse velit atque, quidem itaque saepe maiores aperiam veritatis. Eveniet, reiciendis officia.</p>
+              </div>
             </div>
-        </section>
-        <footer>
-            <div class="blog__simple3">
-                <div>
-                    <div>
-                        <img class="rotate" src="Imagenes/19.png">
-                    </div>
-                    <a href="index.html">
-                        <img class="imglogo__footer" src="Imagenes/1.png" alt="Logo Pandemonium">
-                    </a>
-                    <p class="footer__txt">Para más información: <a class="terminos__anchor" href="#Mauro.net"> Mauro.net</a></p>
-                    <p class="footer__txt">2021 MAURO, INC. Todos los derechos reservados.</p>
-                    <div class="terminos__container2">
-                        <div class="terminos__item2">
-                            <a class="terminos__anchor" href="#Privacidad">Privacidad</a>
-                        </div>
-                        <div class="terminos__item2">
-                            <a class="terminos__anchor" href="#Legal">Legal</a>
-                        </div>
-                        <div class="terminos__item2">
-                            <a class="terminos__anchor" href="#Terminos">Términos</a>
-                        </div >
-                        <div class="terminos__item2">
-                            <a class="terminos__anchor" href="#Blog">Blog</a>
-                        </div>
-                    </div>
-                    <div class="footer__txt">
-                        <a class="terminos__anchor" href="#top">Volver arriba</a>
-                    </div>
-                </div>
+          </article>
+
+          <article class="container blog__simple general_border my-4">
+            <div class="row my-4">
+              <div class="col-lg-4">
+                <img src="img/17.jpg" class="img-fluid my-4 general_border">
+              </div>
+              <div class="col-lg-8">
+                <h4 class="txtgold my-4">Patch 4.1 Nuevos modelos de textura agregados</h4>
+                <p class= "txtold text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae hic sequi consectetur necessitatibus ipsum, nesciunt debitis veniam, molestias esse velit atque, quidem itaque saepe maiores aperiam veritatis. Eveniet, reiciendis officia.</p>
+              </div>
             </div>
-        </footer>
-    </div>
+          </article>
+
+    </section>
+
+    <footer class="py-5 bg-dark general_border">
+        <div>
+            <img class="rotate" src="img/19.png">
+        </div>
+        <a href="index.html">
+            <img class="imglogo__footer my-4" src="img/1.png" alt="Logo Pandemonium">
+        </a>
+        <div class="container px-4"><p class="m-0 text-center text-white">Para más información: <a class="terminos__anchor" href="#Mauro.net"> Mauro.net</a></p>
+        </div>
+        <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; MAURO INC 2021</p>
+        </div>
+        <div class="container px-4"><p class="m-0 text-center text-white">Todos los derechos reservados</p>
+        </div>
+
+        <div class="container terminos__container2">
+            <div class="terminos__item2">
+                <a class="terminos__anchor" href="#Privacidad">Privacidad</a>
+            </div>
+            <div class="terminos__item2">
+                <a class="terminos__anchor" href="#Legal">Legal</a>
+            </div>
+            <div class="terminos__item2">
+                <a class="terminos__anchor" href="#Terminos">Términos</a>
+            </div >
+            <div class="terminos__item2">
+                <a class="terminos__anchor" href="#Blog">Blog</a>
+            </div>
+        </div>
+        <div class="container">
+            <a class="terminos__anchor" href="#top">Volver arriba</a>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
