@@ -1,0 +1,56 @@
+.blog__simple3{
+	background-color: rgba(25, 25, 25, 0.8);
+	border-radius: 30px;
+	padding: 15px;
+}
+.rotate {
+	animation: rotation 10s infinite linear;
+	display: block;
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	padding:10px
+}
+/*---------Legales------------*/
+.footer__txt {
+	text-align: center;
+}
+.imglogo__footer {
+	width: 220px;
+  	height: 30px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	transition: all 0.10s;
+}
+.imglogo__footer:hover{
+	transform: scale(1.5,1.5);
+}
+
+/*-----------Terminos------------*/
+.terminos__container2{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+.terminos__item2 {
+	display: flex;
+	font-size: 20px;
+	padding: 15px;
+}
+.terminos__anchor {
+	text-decoration: none;
+    color:royalblue;
+}
+.terminos__anchor:hover {
+    text-decoration: underline;
+}
+@keyframes rotation {
+  from {
+     transform: rotate(0deg);
+       }
+   to {
+    transform: rotate(359deg);
+  }
+}
