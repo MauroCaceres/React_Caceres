@@ -1,0 +1,61 @@
+/*--------------index--------------*/
+@mixin containers {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+@mixin lists {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: left;
+    color: orange
+}
+@mixin txtold {
+    font-family: 'Goudy Bookletter 1911', serif;
+	font-weight: 1000;
+    font-size: 1.3rem;
+}
+h1 {
+    color: red;
+    font-style: italic;
+}
+.background_container{
+    @include containers;
+    @include txtold;
+    background-image: url("../img/4.jpg");
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: black;
+}
+.background_container2{
+    @include containers;
+    @include lists;
+    background-image: url("../img/6.jpg");
+}
+.background_container3{
+    @include containers;
+    @include lists;
+    background-image: url("../img/8.jpg");
+}
+.main__redes{
+    border-radius: 15px;
+	list-style-type: none;
+    padding: 0;
+	overflow: hidden;	
+	text-align: center;
+	background-image: linear-gradient(to bottom, black , rgb(133, 101, 22));
+}
+.redes__item {
+	position: relative;
+	display: inline-block;
+}
+.redes__anchor {
+	display: block;
+	color: grey;
+	text-decoration: none;
+}
+.redes__img {
+	height: 50px;
+}

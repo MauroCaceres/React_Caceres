@@ -1,0 +1,46 @@
+/*--------------Footer--------------*/
+.terminos__container2{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+.terminos__item2 {
+	font-size: 20px;
+	padding: 15px;
+}
+.terminos__anchor {
+	text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+/*--------------Animación Footer--------------*/
+.imglogo__footer {
+	width: 165px;
+  	height: 25px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	transition: all 0.10s;
+    &:hover{
+        transform: scale(1.5,1.5);
+    }
+}
+.rotate {
+	animation: rotation 10s infinite linear;
+	display: block;
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+    padding: 10px;
+}
+
+@keyframes rotation {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(359deg);
+	}
+}
