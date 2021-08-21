@@ -46,6 +46,7 @@ h1 {
   font-style: italic;
 }
 
+/*--Block Container 1 2 3--*/
 .background_container {
   background-size: cover;
   background-repeat: no-repeat;
@@ -61,6 +62,7 @@ h1 {
   color: black;
 }
 
+/*--Lista 1--*/
 .background_container2 {
   background-size: cover;
   background-repeat: no-repeat;
@@ -74,6 +76,7 @@ h1 {
   background-image: url("../img/6.jpg");
 }
 
+/*--Lista 2--*/
 .background_container3 {
   background-size: cover;
   background-repeat: no-repeat;
@@ -87,6 +90,7 @@ h1 {
   background-image: url("../img/8.jpg");
 }
 
+/*--Redes--*/
 .main__redes {
   border-radius: 15px;
   list-style-type: none;

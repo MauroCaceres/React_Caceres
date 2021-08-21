@@ -21,6 +21,7 @@ h1 {
     color: red;
     font-style: italic;
 }
+/*--Block Container 1 2 3--*/
 .background_container{
     @include containers;
     @include txtold;
@@ -29,16 +30,19 @@ h1 {
     padding-bottom: 1%;
     color: black;
 }
+/*--Lista 1--*/
 .background_container2{
     @include containers;
     @include lists;
     background-image: url("../img/6.jpg");
 }
+/*--Lista 2--*/
 .background_container3{
     @include containers;
     @include lists;
     background-image: url("../img/8.jpg");
 }
+/*--Redes--*/
 .main__redes{
     border-radius: 15px;
 	list-style-type: none;
