@@ -130,6 +130,10 @@ h1 {
   background-color: rgba(15, 15, 15, 0.8);
 }
 
+.txt_space {
+  line-height: 200%;
+}
+
 /*--------------Registrarse--------------*/
 .txtgold2 {
   padding-bottom: 4px;
