@@ -110,3 +110,31 @@ function BuscarNombre()
     console.log("El usuario es: " + resultado.nombre );
     document.getElementById("User").innerHTML = resultado.nombre;
 }
+
+
+/* DOM - Templates */
+
+const productos =[{  id: 1,  nombre: "Pandemonium"          , imag: 14, boton: "oferta1", texto: "Pandemonium: La reencarnación del Mal - Lanzamiento - 59.99 U$D + IVA" },
+                  {  id: 2,  nombre: "Pre-Order"            , imag: 15, boton: "oferta2", texto: "Pandemonium - Pre-Order - 54,99 U$D + IVA" },
+                  {  id: 3,  nombre: "Early Access"         , imag: 16, boton: "oferta3", texto: "Pandemonium - Early Access - 59,99 U$D + IVA" },
+                  {  id: 4,  nombre: "Pre-Order Early Acces", imag: 17, boton: "oferta4", texto: "Pandemonium - Pre-Order + Early Acces - 64,99 U$D + IVA" }];
+
+for (const producto of productos) {
+    let Nodo = document.createElement("article");   
+
+    Nodo.className = "container blog__simple general_border my-4"
+
+    Nodo.innerHTML = `
+    <div class="row my-4">
+    <div class="col-lg-4">
+        <img src="img/${producto.imag}.jpg" class="img-fluid my-4 general_border" alt="Noticia de Actualización 1">
+    </div>
+    <div class="col-lg-8">
+            <h4 class="txtgold my-4">${producto.texto}</h4>
+            <button class="btn btn-primary mb-4" onclick="${producto.boton}.Calcular()">Calcular precio</button>
+        </div>
+    </div>
+    `;
+
+    document.getElementById("CardContainer").appendChild(Nodo);
+}

@@ -36,7 +36,7 @@
 <body class="web_background">
 
   <!--JavaScript-->
-  <script src="js/miarchivo.js"></script>
+  <script defer src="js/miarchivo.js"></script>
 
     <header>
 
@@ -74,7 +74,7 @@
     </header>
 
     <!--Main-->
-    <section>
+    <section id="CardContainer">
       <!--Título-->
         <article class="container blog__simple my-4 general_border">
         <h2 class="txtgold">Compras</h2>
@@ -85,68 +85,8 @@
             <h2 class="text-secondary">¡OFERTAS!</h2>
             </article>
 
-            <!--Oferta 1-->
-        <article class="container blog__simple general_border my-4">
-            <div class="row my-4">
-              <div class="col-lg-4">
-                <img src="img/14.jpg" class="img-fluid my-4 general_border" alt="Noticia de Actualización 1">
-              </div>
-              <div class="col-lg-8">
-                <h4 class="txtgold my-4">Pandemonium: La reencarnación del Mal - Lanzamiento - 59.99 U$D + IVA</h4>
-                <p class= "txtold text-secondary">✅ Juego original</p>
-                <button class="btn btn-primary mb-4" onclick="oferta1.Calcular()">Calcular precio</button>
-              </div>
-            </div>
-          </article>
-
-          <!--Oferta 2-->
-          <article class="container blog__simple general_border my-4">
-            <div class="row my-4">
-              <div class="col-lg-4">
-                <img src="img/15.jpg" class="img-fluid my-4 general_border" alt="Noticia de Actualización 2">
-              </div>
-              <div class="col-lg-8">
-                <h4 class="txtgold my-4">Pandemonium - Pre-Order - 54,99 U$D + IVA</h4>
-                <p class= "txtold text-secondary">✅ Juego original</p>
-                <p class= "txtold text-secondary">✅ Paquete Pandemonium: Set Armadura Sacramento Maldito</p>
-                <button class="btn btn-primary mb-4" type="submit" onclick="oferta2.Calcular()">Calcular precio</button>
-              </div>
-            </div>
-          </article>
-
-          <!--Oferta 3-->
-          <article class="container blog__simple general_border my-4">
-            <div class="row my-4">
-              <div class="col-lg-4">
-                <img src="img/16.jpg" class="img-fluid my-4 general_border" alt="Noticia de Actualización 3">
-              </div>
-              <div class="col-lg-8">
-                <h4 class="txtgold my-4">Pandemonium - Early Access - 59,99 U$D + IVA</h4>
-                <p class= "txtold text-secondary">✅ Juego original</p>
-                <p class= "txtold text-secondary">✅ Paquete Pandemonium: Set Armadura Sacramento Maldito</p>
-                <p class= "txtold text-secondary">✅ Expansión Pandemonium: La venganza del Caído</p>
-                <button class="btn btn-primary mb-4" type="submit" onclick="oferta3.Calcular()">Calcular precio</button>
-              </div>
-            </div>
-          </article>
-
-          <!--Oferta 4-->
-          <article class="container blog__simple general_border my-4">
-            <div class="row my-4">
-              <div class="col-lg-4">
-                <img src="img/17.jpg" class="img-fluid my-4 general_border" alt="Noticia de Actualización 4">
-              </div>
-              <div class="col-lg-8">
-                <h4 class="txtgold my-4">Pandemonium - Pre-Order + Early Acces - 64,99 U$D + IVA</h4>
-                <p class= "txtold text-secondary">✅ Juego original</p>
-                <p class= "txtold text-secondary">✅ Paquete Pandemonium: Set Armadura Sacramento Maldito</p>
-                <p class= "txtold text-secondary">✅ Expansión Pandemonium: La venganza del Caído</p>
-                <p class= "txtold text-secondary">✅ Libro Pandemonium: Sicatrices del Creador</p>
-                <button class="btn btn-primary mb-4" type="submit" onclick="oferta4.Calcular()">Calcular precio</button>
-              </div>
-            </div>
-          </article>
-
+        <!--DOM - Templates--> 
+        
     </section>
 
     <!--Footer-->
