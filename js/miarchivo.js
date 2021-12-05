@@ -63,7 +63,7 @@ let oferta3 = new paquete ("Pandemonium + Early Access", 60);
 let oferta4 = new paquete ("Pandemonium + Pre-Order - Early Access", 65);
 
 
-/*Registrarse*/
+/*Registrarse 2.0*/
 
 class usuario{
     constructor( nombre , dni , edad){
@@ -76,13 +76,21 @@ class usuario{
 
 let listaUsuarios = [];
 
-function Registrarse (){
+/*Eventos*/
 
-    let nombre = prompt("Ingrese su nombre");
-    let edad = parseInt(prompt("Ingrese su edad"));
-    let dni = prompt("Ingrese su DNI");
+let boton = document.getElementById("Registro")
+boton.addEventListener("click", respuestaClick)
+
+function respuestaClick (e){
+
+
+
+    let nombre = document.getElementById("validationDefault01").value;
+    let edad = document.getElementById("validationDefault02").value;
+    let dni = document.getElementById("validationDefault03").value;
 
     listaUsuarios.push( new usuario( nombre , dni , edad ))
+    
     
     /*Ordenamiento por Método Sort*/
     listaUsuarios.sort( (a, b) => {
@@ -94,9 +102,12 @@ function Registrarse (){
         }
         return 0;
     });
-
+    
     console.log(listaUsuarios);
     alert("Bienvenido " + nombre + "!")
+    document.getElementById("Bienvenida").innerHTML = nombre;
+    e.preventDefault()
+
 }
 
 
@@ -114,10 +125,10 @@ function BuscarNombre()
 
 /* DOM - Templates */
 
-const productos =[{  id: 1,  nombre: "Pandemonium"          , imag: 14, boton: "oferta1", texto: "Pandemonium: La reencarnación del Mal - Lanzamiento - 59.99 U$D + IVA" },
-                  {  id: 2,  nombre: "Pre-Order"            , imag: 15, boton: "oferta2", texto: "Pandemonium - Pre-Order - 54,99 U$D + IVA" },
-                  {  id: 3,  nombre: "Early Access"         , imag: 16, boton: "oferta3", texto: "Pandemonium - Early Access - 59,99 U$D + IVA" },
-                  {  id: 4,  nombre: "Pre-Order Early Acces", imag: 17, boton: "oferta4", texto: "Pandemonium - Pre-Order + Early Acces - 64,99 U$D + IVA" }];
+const productos =[{  id: 1,  nombre: "Pandemonium"          , imag: 14, boton: "oferta1", selector: "invalidCheck1", texto: "Pandemonium: La reencarnación del Mal - Lanzamiento - 59.99 U$D + IVA" },
+                  {  id: 2,  nombre: "Pre-Order"            , imag: 15, boton: "oferta2", selector: "invalidCheck2", texto: "Pandemonium - Pre-Order - 54,99 U$D + IVA" },
+                  {  id: 3,  nombre: "Early Access"         , imag: 16, boton: "oferta3", selector: "invalidCheck3", texto: "Pandemonium - Early Access - 59,99 U$D + IVA" },
+                  {  id: 4,  nombre: "Pre-Order Early Acces", imag: 17, boton: "oferta4", selector: "invalidCheck4", texto: "Pandemonium - Pre-Order + Early Acces - 64,99 U$D + IVA" }];
 
 for (const producto of productos) {
     let Nodo = document.createElement("article");   
@@ -129,12 +140,19 @@ for (const producto of productos) {
     <div class="col-lg-4">
         <img src="img/${producto.imag}.jpg" class="img-fluid my-4 general_border" alt="Noticia de Actualización 1">
     </div>
+
     <div class="col-lg-8">
             <h4 class="txtgold my-4">${producto.texto}</h4>
             <button class="btn btn-primary mb-4" onclick="${producto.boton}.Calcular()">Calcular precio</button>
-        </div>
+         </div>
     </div>
     `;
 
     document.getElementById("CardContainer").appendChild(Nodo);
 }
+
+/* JSON */
+
+const enJSON = JSON.stringify(productos);
+sessionStorage.setItem("productos", enJSON);
+

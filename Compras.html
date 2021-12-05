@@ -60,9 +60,6 @@
                       <a class="nav-link menu_txt px-3" href="Contacto.html">Contacto</a>
                 </li>
                 <li class="nav-item">
-                  <button class="btn btn-primary px-3 mt-3" type="submit" onclick="Registrarse()">REGISTRARSE</button>
-                </li>
-                <li class="nav-item">
                   <button class="btn btn-primary px-3 mt-3 mx-3" type="submit" onclick="BuscarNombre()">Login</button>
                 </li>
                 <li class="nav-item">
@@ -74,7 +71,36 @@
     </header>
 
     <!--Main-->
+
+    <!--Registrarte-->
+
+    <article class="container blog__simple my-4 general_border">
+        <form id= Formulario>
+          <div>
+            <div class="col-md-12 mb-3">
+              <label for="validationDefault01">Primer nombre</label>
+              <input type="text" class="form-control" id="validationDefault01" placeholder="" required>
+            </div>
+    
+            <div class="col-md-12 mb-3">
+              <label for="validationDefault02">Edad</label>
+              <input type="text" class="form-control" id="validationDefault02" placeholder="" required>
+            </div>
+    
+            <div class="col-md-12 mb-3">
+              <label for="validationDefault03">DNI</label>
+              <input type="text" class="form-control" id="validationDefault03" placeholder="" required>
+            </div>
+        </form>
+          <button class="btn btn-primary px-3 mt-3" type="submit" onclick="" id="Registro">REGISTRARSE</button>
+        </br>
+      </br>
+      <h2 class="txtgold" id="Bienvenida"></h2>
+    </br>
+      </article>
+  </br>
     <section id="CardContainer">
+
       <!--Título-->
         <article class="container blog__simple my-4 general_border">
         <h2 class="txtgold">Compras</h2>
@@ -87,6 +113,14 @@
 
         <!--DOM - Templates--> 
         
+    </section>
+
+    <section>
+      <div>
+        <ul id=ListaPrecios>
+            
+        </ul>
+      </div>
     </section>
 
     <!--Footer-->
