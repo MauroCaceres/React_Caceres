@@ -151,8 +151,33 @@ for (const producto of productos) {
     document.getElementById("CardContainer").appendChild(Nodo);
 }
 
-/* JSON */
+/* JSON Storage */
 
-const enJSON = JSON.stringify(productos);
-sessionStorage.setItem("productos", enJSON);
+const Comentarios = [];
 
+class Registro{
+    constructor( nombre , comentario){
+
+        this.nombre = nombre;
+        this.comentario = comentario;
+    }
+}
+
+let boton1 = document.getElementById("Resenas")
+boton1.addEventListener("click", Resena)
+
+function Resena (e){
+
+    let nombre = document.getElementById("Nombrecuenta").value;
+    let comentario = document.getElementById("exampleFormControlTextarea1").value;
+
+    Comentarios.push( new Registro( nombre , comentario ))
+
+    sessionStorage.setItem('ComentariosData', JSON.stringify(Comentarios));
+
+    var data = JSON.parse(sessionStorage.getItem('ComentariosData'));
+    console.log(data);
+
+    e.preventDefault()
+
+}
