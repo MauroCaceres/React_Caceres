@@ -153,31 +153,45 @@ for (const producto of productos) {
 
 /* JSON Storage */
 
-const Comentarios = [];
+const cosos = [ { id: 1,  producto: "Arroz", precio: 125 },
+                    {  id: 2,  producto: "Fideo", precio: 70 },
+                    {  id: 3,  producto: "Pan"  , precio: 50},
+                    {  id: 4,  producto: "Flan" , precio: 100}];
 
-class Registro{
-    constructor( nombre , comentario){
+const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) };
+guardarLocal("listaProductos", JSON.stringify(cosos));
 
-        this.nombre = nombre;
-        this.comentario = comentario;
+class Coso {
+    constructor(obj) {
+        this.nombre  = obj.producto.toUpperCase();
+        this.precio  = parseFloat(obj.precio);
     }
-}
+
+    }
+    const almacenados = JSON.parse(localStorage.getItem("listaProductos"));
+    const cosas = [];
+
+    for (const objeto of almacenados)
+        cosas.push(new Coso(objeto));
+
+console.log(cosas);
+
+
+
+
+
+
 
 let boton1 = document.getElementById("Resenas")
 boton1.addEventListener("click", Resena)
 
 function Resena (e){
 
-    let nombre = document.getElementById("Nombrecuenta").value;
     let comentario = document.getElementById("exampleFormControlTextarea1").value;
 
-    Comentarios.push( new Registro( nombre , comentario ))
+    Comentarios.push(comentario);
 
     sessionStorage.setItem('ComentariosData', JSON.stringify(Comentarios));
 
-    var data = JSON.parse(sessionStorage.getItem('ComentariosData'));
-    console.log(data);
-
-    e.preventDefault()
 
 }
