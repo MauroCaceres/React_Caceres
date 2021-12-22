@@ -177,11 +177,6 @@ class Coso {
 console.log(cosas);
 
 
-
-
-
-
-
 let boton1 = document.getElementById("Resenas")
 boton1.addEventListener("click", Resena)
 
@@ -195,3 +190,28 @@ function Resena (e){
 
 
 }
+
+/* jQuery */
+
+$('#UpdateContainer').append('<button class="btn btn-primary px-3 mb-3" type="submit" onclick="" id="Desplegar">DESPLEGAR</button>');
+
+const actualizaciones = [   {  id: 1,  titulo: "Versión 0.5.2 Nuevo sistema de seguimento AI", texto: "Se corrigió un error que causaba que la IA de los monstruos consumiera demasiados recursos del servidor. Esto también soluciona muchos casos en los que los monstruos usaban sus habilidades con más frecuencia de lo previsto como The Shaper en el encuentro de Uber Elder que se teletransporta con demasiada frecuencia." },
+                            {  id: 2,  titulo: "Patch 4.2 Mejora de Motor Gráfico", texto: "Agregamos un deslizador de Bloom a las opciones gráficas que te permitirá ajustar la intensidad de los efectos del Bloom desde un 25 % a un 130 % de su intensidad base." },
+                            {  id: 3,  titulo: "Versión 0.5.1 Arreglos de bugs de interacción"  , texto: "Se corrigió un error introducido en 0.5.0 donde las minas de piroclasto podían disparar más proyectiles de los previstos. Se corrigió un error por el cual Jun podía teletransportarse a lugares inaccesibles. También se corrigió 2 bloques de instancias." },
+                            {  id: 4,  titulo: "Patch 4.1 Nuevos modelos de textura agregados" , texto: "Corregimos un error que a veces causaba que se renderizaran cajas negras encima de algunos objetos. Corregimos un error por el que Elusivo causaba que algunos efectos cosméticos perdieran sus texturas brevemente cuando la bonificación expiraba." }];
+
+
+$("#Desplegar").click(function () {
+
+    for (const actualizacion of actualizaciones) {
+    $("#UpdateContainer").append(`
+    <article id="Extendido" class="container blog__simple general_border my-4">
+        <div>
+            <h4 class="txtgold my-4 py-4">${actualizacion.titulo}</h4>
+            <p class="txtold text-secondary">${actualizacion.texto}</p>
+            <br>
+        </div>
+    </article>`)
+    }
+    $("#Desplegar").remove();
+});
