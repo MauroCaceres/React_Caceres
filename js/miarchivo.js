@@ -151,46 +151,6 @@ for (const producto of productos) {
     document.getElementById("CardContainer").appendChild(Nodo);
 }
 
-/* JSON Storage */
-
-const cosos = [ { id: 1,  producto: "Arroz", precio: 125 },
-                    {  id: 2,  producto: "Fideo", precio: 70 },
-                    {  id: 3,  producto: "Pan"  , precio: 50},
-                    {  id: 4,  producto: "Flan" , precio: 100}];
-
-const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) };
-guardarLocal("listaProductos", JSON.stringify(cosos));
-
-class Coso {
-    constructor(obj) {
-        this.nombre  = obj.producto.toUpperCase();
-        this.precio  = parseFloat(obj.precio);
-    }
-
-    }
-    const almacenados = JSON.parse(localStorage.getItem("listaProductos"));
-    const cosas = [];
-
-    for (const objeto of almacenados)
-        cosas.push(new Coso(objeto));
-
-console.log(cosas);
-
-
-let boton1 = document.getElementById("Resenas")
-boton1.addEventListener("click", Resena)
-
-function Resena (e){
-
-    let comentario = document.getElementById("exampleFormControlTextarea1").value;
-
-    Comentarios.push(comentario);
-
-    sessionStorage.setItem('ComentariosData', JSON.stringify(Comentarios));
-
-
-}
-
 /* jQuery */
 
 $('#OutterContainer').append('<button class="btn btn-primary px-3 mb-3" type="submit" onclick="" id="Generar">DESPLEGAR</button>');
@@ -202,8 +162,8 @@ const actualizaciones = [   {  id: 1,  titulo: "Versión 0.5.2 Nuevo sistema de 
                             {  id: 3,  titulo: "Versión 0.5.1 Arreglos de bugs de interacción"  , texto: "Se corrigió un error introducido en 0.5.0 donde las minas de piroclasto podían disparar más proyectiles de los previstos. Se corrigió un error por el cual Jun podía teletransportarse a lugares inaccesibles. También se corrigió 2 bloques de instancias." },
                             {  id: 4,  titulo: "Patch 4.1 Nuevos modelos de textura agregados" , texto: "Corregimos un error que a veces causaba que se renderizaran cajas negras encima de algunos objetos. Corregimos un error por el que Elusivo causaba que algunos efectos cosméticos perdieran sus texturas brevemente cuando la bonificación expiraba." }];
 
-$("#Contraer").slideUp("fast");
-$("#Desplegar").slideUp("fast");
+$("#Contraer").hide();
+$("#Desplegar").hide();
 $("#Generar").click(function () {
 
     for (const actualizacion of actualizaciones) {
@@ -216,7 +176,7 @@ $("#Generar").click(function () {
         </div>
     </article>`)
     }
-    $("#Generar").slideUp("fast");
+    $("#Generar").hide();
     $("#Contraer").slideDown("fast");
 });
 
@@ -224,14 +184,47 @@ $("#Contraer").click(function (){
 
     $("#UpdateContainer").slideUp("slow");
     $("#Desplegar").slideDown("fast");
-    $("#Contraer").slideUp("fast");   
+    $("#Contraer").hide();   
 
 });
 
 $("#Desplegar").click(function (){
 
     $("#UpdateContainer").slideDown("slow");
-    $("#Desplegar").slideUp("fast");
+    $("#Desplegar").hide();
     $("#Contraer").slideDown("fast");   
 
+});
+
+/* AJAX POST API*/
+
+$( document ).ready(function() {
+
+    const APIURL = 'https://jsonplaceholder.typicode.com/posts' ; 
+
+    const infoPost =  { nombre: "Mauro", review: "Definitivamente el juego del año" };
+
+    $("#Resenas").click(() => { 
+
+    let nombre = document.getElementById("validationDefault0X").value;
+    let review = document.getElementById("exampleFormControlTextarea1").value;
+
+    const infoPost = {nombre, review}
+        $.ajax({
+            method: "POST",
+            url:  APIURL,
+            data: infoPost,
+            success: function(respuesta){
+                $("#formulario").append(`<article id="ResenaAJAX" class="container blog__simple general_border my-4">
+                <div>
+                    <h4 class="txtgold my-4 py-4">${respuesta.nombre}</h4>
+                    <p class="txtold text-secondary">${respuesta.review}</p>
+                    <br>
+                </div>
+            </article>`);
+            $("#ResenaAJAX").hide();
+            $("#ResenaAJAX").slideDown("fast"); 
+            }
+        });
+    });
 });
