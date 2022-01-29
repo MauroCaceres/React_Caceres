@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!--Descripción y Búsqueda-->
-    <meta name="description" content="Llega la secuela a Demonium. Adéntrate en los oscuros confines del infierno en tiempo real.">
+    <meta name="description" content="Enterate de las nuevas noticias y actualizaciones que podemos ofrecerte de la anticipada entrega.">
     <meta name="keywords"  content="Pandemonium, juego, guerra, RPG, juegos de rol, RTS, zombies, demonios, diablo, disparos">
     
     <!--Bootstrap 4-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  
+ 
     <!--Icono-->
     <link rel="shortcut icon" href="img/icon/favicon.ico" type="image/x-icon">
     
@@ -24,22 +24,26 @@
     <link rel="stylesheet" href="css/style.css">
     
     <!--Open Graph-->
-    <meta property="og:title" content="Pandemonium® : La reencarnación del Mal">
+    <meta property="og:title" content="Noticias: Pandemonium®">
     <meta property="og:image" content="img/21.png">
-    <meta property="og:url" content="https://maurocaceres.github.io/JuegoNuevo_Caceres/">
-    <meta property="og:description" content="Llega la secuela a Demonium. Adéntrate en los oscuros confines del infierno en tiempo real.">
-
-        
-    <title>Pandemonium® : La reencarnación del Mal</title>
+    <meta property="og:url" content="https://maurocaceres.github.io/JuegoNuevo_Caceres/Noticias.html">
+    <meta property="og:description" content="Enterate de las nuevas noticias y actualizaciones que podemos ofrecerte de la anticipada entrega.">
+    
+    
+    <title>Compras: Pandemonium®</title>
 </head>
 
-<body>
+<body class="web_background">
+
+  <!--JavaScript-->
+  <script defer src="js/miarchivo.js"></script>
+
     <header>
-      
+
       <!--Menú de navegación-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark general_border">
-            <a class="navbar-brand" href="index.html">
-                <img class="img-fluid imglogo" src="img/1.png" alt="Logo Pandemonium">
+            <a class="navbar-brand" href="#index" id="index">
+                <img class="img-fluid imglogo" src="img/1.png"  alt="Logo Pandemonium">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -47,134 +51,233 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                   <a class="nav-link menu_txt px-3" href="General.html">General</a>
+                   <a class="nav-link menu_txt px-3" href="#Compras" id="Compra">Compras</a>
                 </li>
                 <li class="nav-item">
-                      <a class="nav-link menu_txt px-3" href="Noticias.html">Noticias</a>
+                  <a class="nav-link menu_txt px-3" href="#Registrarse" id="Registrarse">Registrarse</a>
                 </li>
                 <li class="nav-item">
-                      <a class="nav-link menu_txt px-3" href="Contacto.html">Contacto</a>
+                  <button class="btn btn-primary px-3 mt-3 mx-3" id="Login" type="submit" onclick="BuscarNombre()">Login</button>
                 </li>
                 <li class="nav-item">
-                      <a  class="nav-link menu_txt px-3" href="Registrarse.html">REGISTRARSE</a>
+                  <button class="btn btn-primary px-3 mt-3 mx-3" id="UnLogin" type="submit"onclick="CerrarSesion()">Cerrar Sesión</button>
                 </li>
-              </ul>
-            </div>
-          </nav>
-
-      <!--Imagen PPL-->
-        <div class="jumbotron text-center background_title mb-4 general_border">
-            <hr>
+                <li class="nav-item">
+                  <p class="menu_txt px-3 mt-2 text-secondary" id="User"></p>
+                </li>
+            </ul>
         </div>
+        </nav>
     </header>
 
-    <!--Main-->
-    <section>
-      <!--Título PPL-->
-        <h1 class="txtred">Pandemonium: <span class="txtgrey">La reencarnación del Mal</span></h1>
+<!----------------------------Main index Pandemonium------------------------------>
 
-      <!--Container 1-->
-      <article class="container background_container general_border my-4">
-        <div class="row my-4">
-          <div class="col-lg-4">
-            <img src="img/5.jpg" class="img-fluid my-4 general_border" alt="Imagen del juego uno">
-          </div>
-          <div class="col-lg-8">
-            <h3 class="titledarkred">Graficos Renovados</h3>
-            <p class="txtdarkred txt_space">Los jugadores lucharán con auténticas armas de la Primera Guerra Mundial contra hordas de enemigos incluyendo humanos, demonios y vampiros gracias a la nueva tecnología de Unreal Engine 5</p>
-            <p class="txtdarkred txt_space">Hay que prestar mayor atencion a lo que yace en cada rincón oscuro de Pandemonium.</p>
-          </div>
-        </div>
+<article id="Pandemonium">
+<!--Imagen PPL-->
+<div class="jumbotron text-center background_title mb-4 general_border">
+  <hr>
+</div>
+</header>
+
+<!--Main-->
+<section>
+<!--Título PPL-->
+<h1 class="txtred">Pandemonium: <span class="txtgrey">La reencarnación del Mal</span></h1>
+
+<!--Container 1-->
+<article class="container background_container general_border my-4">
+<div class="row my-4">
+<div class="col-lg-4">
+  <img src="img/5.jpg" class="img-fluid my-4 general_border" alt="Imagen del juego uno">
+</div>
+<div class="col-lg-8">
+  <h3 class="titledarkred">Graficos Renovados</h3>
+  <p class="txtdarkred txt_space">Los jugadores lucharán con auténticas armas de la Primera Guerra Mundial contra hordas de enemigos incluyendo humanos, demonios y vampiros gracias a la nueva tecnología de Unreal Engine 5</p>
+  <p class="txtdarkred txt_space">Hay que prestar mayor atencion a lo que yace en cada rincón oscuro de Pandemonium.</p>
+</div>
+</div>
+</article>
+
+<!--Lista 1-->
+<article class="container background_container2 general_border">
+<div>
+  <ul>
+      <li class="lista__txt"><h3>Mapas pre-generados</h3></li>
+      <li class="lista__txt"><h3>Ambiente envolvente</h3></li>
+      <li class="lista__txt"><h3>Nuevos niveles</h3></li>
+      <li class="lista__txt"><h3>Escenarios 4K</h3></li>
+  </ul>
+</div> 
+</article> 
+
+<!--Container 2-->
+<article class="container background_container general_border my-4">
+<div class="row my-4">
+<div class="col-lg-8">
+  <h3 class="titledarkred">Características Nuevas</h3>
+  <p class="txtdarkred txt_space">Vas a encontrarte con poderosos artefactos mágicos y poderes vampíricos que van mas allá de la imaginación. Deberás vigilar tu barra de corrupción para evitar caer en las garras del infierno.</p>
+  <p class="txtdarkred txt_space">El título de esta entrega brinda luchas online con hasta 16 jugadores</p>
+</div>
+<div class="col-lg-4">
+  <img src="img/7.jpg" class="img-fluid my-4 general_border" alt="Imagen del juego 2">
+</div>
+</div>
+</article>
+
+<!--Lista 2-->
+<article class="container background_container3 general_border">
+<div>
+  <ul>
+      <li class="lista__txt2"><h3>Nuevas armas y armaduras</h3></li>
+      <li class="lista__txt2"><h3>Dificultad Modo Infierno</h3></li>
+      <li class="lista__txt2"><h3>Combate CaC mejorado</h3></li>
+      <li class="lista__txt2"><h3>AI dinámica</h3></li>
+  </ul>
+</div> 
+</article> 
+
+<!--Container 3-->
+<article class="container background_container general_border my-4">
+<div class="row my-4">
+<div class="col-lg-4">
+  <img src="img/9.jpg" class="img-fluid my-2 general_border" alt="Imagen de artwork">
+</div>
+<div class="col-lg-8">
+  <h3 class="titledarkred my-2">Interfaz Rediseñada</h3>
+  <p class="txtdarkred txt_space my-4">Combate en primera persona rápido e intenso, diferente a los shooters de siempre con una IA nueva implementada para convertirse en un verdadero reto.</p>
+  <p class="txtdarkred txt_space">Encuentros con jefes de fin de fase brutales y masivos que se adaptaran a tu estilo de juego.</p>
+</div>
+</div>
+</article>
+
+<!--Redes-->
+<article class="container redes my-4">
+<ul class="main__redes">
+  <li class="redes__item">
+      <a class="redes__anchor" href="#Facebook">
+          <img class="redes__img px-4" src="img/F.png" alt="Logo de facebook">
+      </a>	
+  </li>
+  <li class="redes__item">
+      <a class="redes__anchor" href="#Steam">
+          <img class="redes__img px-4" src="img/S.png" alt="Logo de Steam">
+      </a>	
+  </li>
+  <li class="redes__item">
+      <a class="redes__anchor" href="#Twitter">
+          <img class="redes__img px-4" src="img/T.png" alt="Logo de Twitter">
+      </a>	
+  </li>
+  <li class="redes__item">
+      <a class="redes__anchor" href="#Youtube">
+          <img class="redes__img px-4" src="img/Y.png" alt="Logo de Youtube">
+      </a>	
+  </li>
+  <li class="redes__item">
+      <a class="redes__anchor" href="#Instagram">
+          <img class="redes__img px-4" src="img/I.png" alt="Logo de Instagram">
+      </a>
+  </li>
+</ul>
+</article>
+</section>
+</article>
+<!--------------------------Fin index Pandemonium-------------------------------->
+
+
+
+  <!--Registrarte-->
+
+    <article class="container blog__simple my-4 general_border" id="Registrate">
+      <h2 class="txtgold">Registrate</h2>
+        <form id= Formulario>
+          <div>
+            <div class="col-md-12 mb-3">
+              <label for="validationDefault01">Primer nombre</label>
+              <input type="text" class="form-control" id="validationDefault01" placeholder="" required>
+            </div>
+    
+            <div class="col-md-12 mb-3">
+              <label for="validationDefault02">Edad</label>
+              <input type="text" class="form-control" id="validationDefault02" placeholder="" required>
+            </div>
+    
+            <div class="col-md-12 mb-3">
+              <label for="validationDefault03">DNI</label>
+              <input type="text" class="form-control" id="validationDefault03" placeholder="" required>
+            </div>
+        </form>
+          <button class="btn btn-primary px-3 mt-3" type="submit" onclick="" id="Registro">REGISTRARSE</button>
+        </br>
+      </br>
+      <h2 class="txtgold" id="Bienvenida"></h2>
+    </br>
       </article>
+  </br>
 
-      <!--Lista 1-->
-      <article class="container background_container2 general_border">
-        <div>
-            <ul>
-                <li class="lista__txt"><h3>Mapas pre-generados</h3></li>
-                <li class="lista__txt"><h3>Ambiente envolvente</h3></li>
-                <li class="lista__txt"><h3>Nuevos niveles</h3></li>
-                <li class="lista__txt"><h3>Escenarios 4K</h3></li>
-            </ul>
-        </div> 
-      </article> 
 
-      <!--Container 2-->
-      <article class="container background_container general_border my-4">
-        <div class="row my-4">
-          <div class="col-lg-8">
-            <h3 class="titledarkred">Características Nuevas</h3>
-            <p class="txtdarkred txt_space">Vas a encontrarte con poderosos artefactos mágicos y poderes vampíricos que van mas allá de la imaginación. Deberás vigilar tu barra de corrupción para evitar caer en las garras del infierno.</p>
-            <p class="txtdarkred txt_space">El título de esta entrega brinda luchas online con hasta 16 jugadores</p>
-          </div>
-          <div class="col-lg-4">
-            <img src="img/7.jpg" class="img-fluid my-4 general_border" alt="Imagen del juego 2">
-          </div>
-        </div>
+
+
+<!---------------------------Compras------------------------------->
+<article id="Compras">
+
+    <section id="CardContainer">
+
+      <!--Título-->
+        <article class="container blog__simple my-4 general_border">
+        <h2 class="txtgold">Compras</h2>
+        </article>
+
+        <!--Subtítulo-->
+        <article class="container my-4 txtleft txtgold">
+            <h2 class="text-secondary">¡OFERTAS!</h2>
+            </article>
+
+        <!--DOM - Templates--> 
+        
+    </section>
+
+    <section id="formulario">
+        <div class="container blog__simple my-4 general_border">
+          <h2 class="txtgold">Comentarios y Reseñas</h2>
+
+          <!--Formulario de Comentarios-->
+
+            <div class="col-md-12 mb-3">
+              <label for="validationDefaultX">Primer nombre</label>
+              <input type="text" class="form-control" id="validationDefault0X" placeholder="" required>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Comentario</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="Resenas">Enviar</button>
+          </br>
+        </br>
+      </div>
+    </section>
+
+    <!--Actualizaciones-->
+    <section id="OutterContainer">
+      <article class="container blog__simple my-4 general_border">
+        <h2 class="txtgold">Actualizaciones</h2>
       </article>
-
-      <!--Lista 2-->
-      <article class="container background_container3 general_border">
-        <div>
-            <ul>
-                <li class="lista__txt2"><h3>Nuevas armas y armaduras</h3></li>
-                <li class="lista__txt2"><h3>Dificultad Modo Infierno</h3></li>
-                <li class="lista__txt2"><h3>Combate CaC mejorado</h3></li>
-                <li class="lista__txt2"><h3>AI dinámica</h3></li>
-            </ul>
-        </div> 
-      </article> 
-
-      <!--Container 3-->
-      <article class="container background_container general_border my-4">
-        <div class="row my-4">
-          <div class="col-lg-4">
-            <img src="img/9.jpg" class="img-fluid my-2 general_border" alt="Imagen de artwork">
-          </div>
-          <div class="col-lg-8">
-            <h3 class="titledarkred my-2">Interfaz Rediseñada</h3>
-            <p class="txtdarkred txt_space my-4">Combate en primera persona rápido e intenso, diferente a los shooters de siempre con una IA nueva implementada para convertirse en un verdadero reto.</p>
-            <p class="txtdarkred txt_space">Encuentros con jefes de fin de fase brutales y masivos que se adaptaran a tu estilo de juego.</p>
-          </div>
-        </div>
-      </article>
-
-      <!--Redes-->
-      <article class="container redes my-4">
-        <ul class="main__redes">
-            <li class="redes__item">
-                <a class="redes__anchor" href="#Facebook">
-                    <img class="redes__img px-4" src="img/F.png" alt="Logo de facebook">
-                </a>	
-            </li>
-            <li class="redes__item">
-                <a class="redes__anchor" href="#Steam">
-                    <img class="redes__img px-4" src="img/S.png" alt="Logo de Steam">
-                </a>	
-            </li>
-            <li class="redes__item">
-                <a class="redes__anchor" href="#Twitter">
-                    <img class="redes__img px-4" src="img/T.png" alt="Logo de Twitter">
-                </a>	
-            </li>
-            <li class="redes__item">
-                <a class="redes__anchor" href="#Youtube">
-                    <img class="redes__img px-4" src="img/Y.png" alt="Logo de Youtube">
-                </a>	
-            </li>
-            <li class="redes__item">
-                <a class="redes__anchor" href="#Instagram">
-                    <img class="redes__img px-4" src="img/I.png" alt="Logo de Instagram">
-                </a>
-            </li>
-        </ul>
+      <article id="UpdateContainer">
+        
       </article>
     </section>
+</article>
+<!---------------------------Fin Compras------------------------------->
+
+
+
 
     <!--Footer-->
     <footer class="py-5 bg-dark general_border">
         <div>
-            <img class="rotate" src="img/19.png" alt="Estrella rotante">
+            <img class="rotate" src="img/19.png"  alt="Estrella rotante">
         </div>
         <a href="#top">
             <img class="imglogo__footer my-4" src="img/1.png" alt="Logo Pandemonium">
@@ -201,10 +304,16 @@
                 <a class="terminos__anchor" href="#Blog">Blog</a>
             </div>
         </div>
+        <div class="container">
+            <a class="terminos__anchor" href="#top">Volver arriba</a>
+        </div>
     </footer>
+
+
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </body>
 </html>

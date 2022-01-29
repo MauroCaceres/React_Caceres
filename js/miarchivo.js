@@ -47,10 +47,12 @@ class paquete{
         alert("Paquete seleccionado: " + this.nombre)
         alert("Precio original: " + this.precio)
         let iva = this.precio * 0.21;
-        let precioTotal = this.precio + iva;
+        let precioTotal1 = this.precio + iva;
+        let precioTotal = precioTotal1.toFixed(2);
         alert("Precio total + IVA: " + precioTotal)
         let Descuento = precioTotal * 0.1;
-        let precioDescuento= precioTotal - Descuento;
+        let precioDescuento1 = precioTotal - Descuento;
+        let precioDescuento = precioDescuento1.toFixed(2);
         alert("Si te registras con nuestro código de descuento, pagás un 10% menos siendo un total de: " + precioDescuento+ " !") 
 
     }
@@ -118,14 +120,27 @@ function BuscarNombre()
     let ingreso = prompt("Ingrese su nombre de usuario");
     const resultado = listaUsuarios.find((m) => m.nombre === ingreso );
 
-    console.log("El usuario es: " + resultado.nombre );
-    document.getElementById("User").innerHTML = resultado.nombre;
+    if( ingreso == resultado.nombre){
+        document.getElementById("User").innerHTML = resultado.nombre;
+        alert("El usuario es: " + resultado.nombre );
+        $("#formulario").slideDown("fast");
+        $("#Login").hide();
+        $("#UnLogin").slideDown("fast");
+    }
+}
+
+function CerrarSesion()
+{
+    document.getElementById("User").innerHTML = "";
+    $("#formulario").hide();
+    $("#UnLogin").hide();
+    $("#Login").slideDown("fast");
 }
 
 
-/* DOM - Templates */
+/* DOM - Templates Productos */
 
-const productos =[{  id: 1,  nombre: "Pandemonium"          , imag: 14, boton: "oferta1", selector: "invalidCheck1", texto: "Pandemonium: La reencarnación del Mal - Lanzamiento - 59.99 U$D + IVA" },
+const productos =[{  id: 1,  nombre: "Pandemonium"          , imag: 14, boton: "oferta1", selector: "invalidCheck1", texto: "Pandemonium: La reencarnación del Mal - Lanzamiento - 59,99 U$D + IVA" },
                   {  id: 2,  nombre: "Pre-Order"            , imag: 15, boton: "oferta2", selector: "invalidCheck2", texto: "Pandemonium - Pre-Order - 54,99 U$D + IVA" },
                   {  id: 3,  nombre: "Early Access"         , imag: 16, boton: "oferta3", selector: "invalidCheck3", texto: "Pandemonium - Early Access - 59,99 U$D + IVA" },
                   {  id: 4,  nombre: "Pre-Order Early Acces", imag: 17, boton: "oferta4", selector: "invalidCheck4", texto: "Pandemonium - Pre-Order + Early Acces - 64,99 U$D + IVA" }];
@@ -162,8 +177,42 @@ const actualizaciones = [   {  id: 1,  titulo: "Versión 0.5.2 Nuevo sistema de 
                             {  id: 3,  titulo: "Versión 0.5.1 Arreglos de bugs de interacción"  , texto: "Se corrigió un error introducido en 0.5.0 donde las minas de piroclasto podían disparar más proyectiles de los previstos. Se corrigió un error por el cual Jun podía teletransportarse a lugares inaccesibles. También se corrigió 2 bloques de instancias." },
                             {  id: 4,  titulo: "Patch 4.1 Nuevos modelos de textura agregados" , texto: "Corregimos un error que a veces causaba que se renderizaran cajas negras encima de algunos objetos. Corregimos un error por el que Elusivo causaba que algunos efectos cosméticos perdieran sus texturas brevemente cuando la bonificación expiraba." }];
 
+
+/*-----------------Default hidden--------------*/
+$("#Registrate").hide();
 $("#Contraer").hide();
 $("#Desplegar").hide();
+$("#Compras").hide();
+$("#formulario").hide();
+$("#UnLogin").hide();
+$("#Bienvenida").hide();
+/*---------------*/
+
+
+
+/*-----------------Botones de paginas-------------- */
+$("#Registrarse").click(function () { 
+    $("#Registrate").slideDown("fast");
+    $("#Pandemonium").hide();
+    $("#Compras").hide();
+});
+
+$("#Compra").click(function () { 
+    $("#Compras").slideDown("slow");
+    $("#Pandemonium").hide();
+    $("#Registrate").hide();
+});
+
+$("#index").click(function () { 
+    $("#Pandemonium").slideDown("slow");
+    $("#Registrate").hide();
+    $("#Compras").hide();
+});
+/*---------------- */
+
+
+
+/*--------Template Actualizaciones con JQ-------- */
 $("#Generar").click(function () {
 
     for (const actualizacion of actualizaciones) {
