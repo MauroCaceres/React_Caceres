@@ -1,4 +1,6 @@
 import ItemList from './ItemList';
+//PRUEBA
+import ItemDetailContainer from './ItemDetailContainer';
 
 const ItemListContainer = (props) => {
     return (
