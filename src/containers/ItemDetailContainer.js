@@ -38,7 +38,9 @@ const ItemDetailContainer = () => {
       
       const getItems = () => { 
         const prodPromise = new Promise( (res, rej) => {
-            res(productos)
+            setTimeout(() => {
+                res(productos)
+            }, 2000);
         })
         prodPromise.then( Data => {
             if (id) {
