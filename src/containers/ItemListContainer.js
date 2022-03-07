@@ -1,12 +1,14 @@
+import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
 //PRUEBA
-import ItemDetailContainer from './ItemDetailContainer';
 
 const ItemListContainer = (props) => {
+
+    const {category} = useParams()
+
     return (
     <>
-        <h3>{props.name}</h3>
-        <ItemList />
+        <ItemList category={category}/>
     </>
     )
 }

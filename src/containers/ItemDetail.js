@@ -1,15 +1,33 @@
-import { useParams } from "react-router-dom";
 
-const ItemDetail = ({char: item}) => {
 
-    const {id} = useParams();
+const ItemDetail = ({item:p}) => {
+
+
     
     return (
     <>
 
         <div>Artículo seleccionado</div>
-        <div>ID del Artículo: {id}</div>
+        <div>ID del Artículo: {p.id}</div>
 
+        <div className="m-4 max-w-sm w-full lg:max-w-full lg:flex border-r border-b border-l border-t border-gray-400 rounded-md">
+  <img className=" h-60 flex-none bg-cover text-center overflow-hidden rounded-md" alt="" src={require('./'+ p.img+'.jpg')}>
+  </img>
+  <div className="p-4 flex flex-col justify-between leading-normal">
+    <div className="mb-8">
+      <div className="text-gray-900 font-bold text-xl mb-2">{p.presentacion}</div>
+      <br/>
+      <p className="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+    </div>
+    <div className="flex items-center">
+      <div className="text-sm">
+        <h1 className="text-gray-900 leading-none font-bold">PRECIO</h1>
+        <br/>
+        <p className="text-gray-600 font-bold">{p.precio}</p>
+      </div>
+    </div>
+  </div>
+</div>
     </>
     )
 }

@@ -1,7 +1,6 @@
-import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import ItemDetail from "./ItemDetail";
 import productos from './Item';
 
 const ItemDetailContainer = () => {
@@ -9,10 +8,10 @@ const ItemDetailContainer = () => {
     const {id} = useParams();
 
     const [items, setItems] = useState([])
-
+/*
     useEffect(() => {
       getItems()
-    }, [])
+    }, [category])
     
     
     const getItems = () => { 
@@ -24,17 +23,40 @@ const ItemDetailContainer = () => {
   
       getItemsPromise.then(
           Data => {
-              setItems(Data)
-              console.log(Data);
-          }
-      )
-    }
+            if (category) {
+                setItems( Data.filter( p => p.categoria === category ) )
+            } else {
+                setItems( Data )
+            }
+        })
+    }*/
+
+
+    useEffect(() => {
+        getItems()
+      }, [id])
+      
+      const getItems = () => { 
+        const prodPromise = new Promise( (res, rej) => {
+            res(productos)
+        })
+        prodPromise.then( Data => {
+            if (id) {
+                setItems( Data.filter( p => p.id === id ) )
+            } else {
+                setItems( Data )
+            }
+        })
+      }
+    
+
+
+
+
 
     return (
     <>
-        <div>Artículo seleccionado</div>
-        <div>ID del Artículo: {id}</div>
-
+     {items.map( p => <ItemDetail key={p.id} item={p} />)}
     </>
     )
 }
