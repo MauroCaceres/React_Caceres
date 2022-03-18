@@ -2,35 +2,13 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import ItemDetail from "./ItemDetail";
 import productos from './Item';
+import Loading from "./Loading";
 
 const ItemDetailContainer = () => {
 
     const {id} = useParams();
 
     const [items, setItems] = useState([])
-/*
-    useEffect(() => {
-      getItems()
-    }, [category])
-    
-    
-    const getItems = () => { 
-      const getItemsPromise = new Promise( (resolve, reject) =>{
-          setTimeout(() => {
-              resolve(productos)
-          }, 2000);
-      })
-  
-      getItemsPromise.then(
-          Data => {
-            if (category) {
-                setItems( Data.filter( p => p.categoria === category ) )
-            } else {
-                setItems( Data )
-            }
-        })
-    }*/
-
 
     useEffect(() => {
         getItems()
@@ -40,11 +18,11 @@ const ItemDetailContainer = () => {
         const prodPromise = new Promise( (res, rej) => {
             setTimeout(() => {
                 res(productos)
-            }, 2000);
+            }, 1000);
         })
         prodPromise.then( Data => {
             if (id) {
-                setItems( Data.filter( p => p.id === id ) )
+                setItems( Data.filter( item => item.id === id ) )
             } else {
                 setItems( Data )
             }
@@ -58,7 +36,8 @@ const ItemDetailContainer = () => {
 
     return (
     <>
-     {items.map( p => <ItemDetail key={p.id} item={p} />)}
+    <Loading></Loading>
+     {items.map( item => <ItemDetail key={item.id} item={item} />)}
     </>
     )
 }

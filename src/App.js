@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './App.css';
@@ -6,15 +5,17 @@ import NavBar from './components/NavBar.js';
 import ItemListContainer from './containers/ItemListContainer.js';
 import ItemDetailContainer from './containers/ItemDetailContainer';
 
+import { CartContextProvider } from "./context/CartContext";
+
 
 function App() {
   return <>
-
+    <CartContextProvider>
     <BrowserRouter>
+
       <NavBar></NavBar>
       
       <Routes>
-
         <Route index element={<ItemListContainer/>}></Route>
 
         <Route path='categoria' element={<ItemListContainer/>}>
@@ -24,10 +25,10 @@ function App() {
         <Route path='item' element={<ItemDetailContainer/>}>
           <Route path=':id' element={<ItemDetailContainer/>}></Route>
         </Route>
-
       </Routes>
 
     </BrowserRouter>
+    </CartContextProvider>
   </>;
 }
 

@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import productos from './Item';
+import Loading from './Loading';
+
+
 
 const ItemList = ({category}) => {
 
@@ -15,7 +18,7 @@ const ItemList = ({category}) => {
       const getProdPromise = new Promise( (resolve, reject) =>{
           setTimeout(() => {
               resolve(productos)
-          }, 2000);
+          }, 1000);
       })
   
       getProdPromise.then(
@@ -30,7 +33,8 @@ const ItemList = ({category}) => {
 
     return (
     <>
-    
+    <Loading></Loading>
+
         {prod.map( producto => 
                     
             <div key={producto.id} item={producto} className="mx-6 my-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
