@@ -17,7 +17,7 @@ function ItemDetail  ({item}){
     return (
     <>
         <div>Artículo seleccionado</div>
-        <div>ID del Artículo: {item.id}</div>
+        <div>Nombre del Artículo: {item.name}</div>
 
         <div className="m-4 max-w-sm w-full lg:max-w-full lg:flex border-r border-b border-l border-t border-gray-400 rounded-md">
         <img className=" h-60 flex-none bg-cover text-center overflow-hidden rounded-md" alt="" src={require('./'+ item.img+'.jpg')}></img>

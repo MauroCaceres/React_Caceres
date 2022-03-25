@@ -29,10 +29,24 @@ export function CartContextProvider({children}) {
     setItemsCart([]);
     }
 
+    function removeItem(id){                            //Remover del carrito
+        let DeleteCart = [...itemsCart];
+        let index = DeleteCart.filter(i => i.id !== id);
+        setItemsCart(index)
+    }
+
+    const totalPrice = itemsCart.reduce ((accum, item) => accum + (item.precio * item.quantity), 0)  // Suma de (Precio x Quantity) de Array CONTEXT
+
+    const totalQuantity = itemsCart.reduce((accum,item) => accum + item.quantity, 0);  // Suma de Quantities de Array CONTEXT
+
+    console.log(totalQuantity)                          //PRUEBA de Suma de Quantities Array CONTEXT
+
+    console.log(totalPrice)                         //PRUEBAS de Suma de (Precio x Quantity) de Array CONTEXT
+
     console.log(itemsCart);                     //PRUEBA de Array CONTEXT
     
     return (
-        <CartContext.Provider value={{addItem, itemsCart, clearCart}}>
+        <CartContext.Provider value={{addItem, itemsCart, clearCart, removeItem, totalQuantity, totalPrice}}>
             {children}
         </CartContext.Provider>
     )

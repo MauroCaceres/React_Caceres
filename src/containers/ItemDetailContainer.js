@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import ItemDetail from "./ItemDetail";
-import productos from './Item';
+import { getProducts } from "../firebase/firebaseClient";
 import Loading from "./Loading";
 
 const ItemDetailContainer = () => {
@@ -11,29 +11,20 @@ const ItemDetailContainer = () => {
     const [items, setItems] = useState([])
 
     useEffect(() => {
-        getItems()
+        getProducts().then( data => {       //Llamado a {productos} de firebase
+            getItems(data)              //Apendice Condicional
+        })
       }, [id])
       
-      const getItems = () => { 
-        const prodPromise = new Promise( (res, rej) => {
-            setTimeout(() => {
-                res(productos)
-            }, 1000);
-        })
-        prodPromise.then( Data => {
-            if (id) {
-                setItems( Data.filter( item => item.id === id ) )
+      const getItems = (data) => { // Condicional Mostrar ID
+
+             if (id) {              //IF ID esta definido, entonces filtrar, sino muestro todo
+                setItems( data.filter( item => item.id === id ) )
             } else {
-                setItems( Data )
+                setItems( data )
             }
-        })
       }
     
-
-
-
-
-
     return (
     <>
     <Loading></Loading>
