@@ -39,11 +39,11 @@ export function CartContextProvider({children}) {
 
     const totalQuantity = itemsCart.reduce((accum,item) => accum + item.quantity, 0);                       // Suma de Quantities de Array CONTEXT
 
-    console.log(totalQuantity)                                                                               //PRUEBA de Suma de Quantities Array CONTEXT
+    //console.log(totalQuantity)                                                                               //PRUEBA de Suma de Quantities Array CONTEXT
 
-    console.log(totalPrice)                                                                                  //PRUEBAS de Suma de (Precio x Quantity) de Array CONTEXT
+    //console.log(totalPrice)                                                                                  //PRUEBAS de Suma de (Precio x Quantity) de Array CONTEXT
 
-    console.log(itemsCart);                                                                                  //PRUEBA de Array CONTEXT
+    //console.log(itemsCart);                                                                                  //PRUEBA de Array CONTEXT
     
     return (
         <CartContext.Provider value={{addItem, itemsCart, clearCart, removeItem, totalQuantity, totalPrice}}>

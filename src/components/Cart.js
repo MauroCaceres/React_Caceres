@@ -47,10 +47,10 @@ const Cart = () => {
             const formDataArr = Object.entries(formData);               //Convierte formData en Array, quita email2 y vuelve a convertirlo en Objeto
             const filteredArr = formDataArr.filter(function ([key, value]) {return key !== "email2";});
             const order = Object.fromEntries(filteredArr);              //Convierte array de vuelta a objeto
-            console.log(order);
+            //console.log(order);
 
             addOrder(order).then( data => {                             // Envia los datos de order a orders de Firebase
-                console.log(data);
+                //console.log(data);
                 setIfBuy(true)                               //Condicional IF hecha la compra
                 setShowId(data)                              //Muestra ID en el modal
                 setShowModal(true)                           //Muestra modal
@@ -59,7 +59,7 @@ const Cart = () => {
         }
         else{
             setIfEmail(false)                                               // Muestra en DOM que los mails no coinciden
-            console.log("son Emails diferentes");
+            //console.log("son Emails diferentes");
         }
     };
 
