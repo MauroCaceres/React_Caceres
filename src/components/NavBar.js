@@ -1,4 +1,3 @@
-//import logo from './1.svg';
 import Logo from './Logo.js';
 import { Link } from "react-router-dom"
 import CartWidget from './CartWidget.js';

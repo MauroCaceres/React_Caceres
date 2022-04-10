@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
-import ItemList from './ItemList';
+import ItemList from '../components/ItemList';
 import { getProducts } from "../firebase/firebaseClient";
 import { useEffect, useState } from 'react';
-import Loading from './Loading';
+import Loading from '../components/Loading';
 
 const ItemListContainer = () => {
 

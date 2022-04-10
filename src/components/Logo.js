@@ -1,4 +1,4 @@
-import logo from './1.svg';
+import logo from '../img/1.svg';
 
 const Logo = () => {
     return (

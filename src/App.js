@@ -4,7 +4,7 @@ import './App.css';
 import NavBar from './components/NavBar.js';
 import ItemListContainer from './containers/ItemListContainer.js';
 import ItemDetailContainer from './containers/ItemDetailContainer';
-import Cart from './containers/Cart';
+import Cart from './components/Cart';
 
 import { CartContextProvider } from "./context/CartContext";
 

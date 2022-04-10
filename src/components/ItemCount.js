@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 export default function ItemCount({stock, addToCart}){
-    const [count, setCount] = useState(1);              //COUNTER STATE
+    const [count, setCount] = useState(1);                              //COUNTER STATE
 
-function suma(){                                //COUNTER MIN MAX 
+function suma(){                                                        //COUNTER MIN MAX 
     if (count < stock) setCount(count + 1);
 }
 function resta(){
